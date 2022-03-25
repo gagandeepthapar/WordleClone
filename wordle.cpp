@@ -23,6 +23,53 @@ void grey(){
 		printf("\x1b[0m");
 }
 
+string userInput(){
+
+    int ct = 0;
+    char c;
+    string g(5, ' ');
+    
+    system("stty raw");
+
+    // backspace -> 127
+    // space -> 32
+    // enter -> 13
+
+    while(1){
+
+        cout << "|";
+        for(int i = 0; i < 5; i++){
+            cout << " " << g[i] << " |";
+        }
+
+        c = fgetc(stdin);
+        cout << clearLine;
+
+        if((int) 'a' <= c && c <= (int) 'z'){
+            g[ct] = (char) ((int)c - 32);
+            ct += 1;
+        }
+
+        if(c == 13){
+            if(ct == 5){
+                system("stty cooked");
+                return g;
+            }
+        }
+        
+        if(c == 127){
+            if(ct > 0){
+                ct -=1;
+                g[ct] = ' ';
+            }
+        }
+
+    }
+
+    return g;
+
+}
+
 class word{
 
     public:
@@ -31,6 +78,7 @@ class word{
 
         word(string wd){
             setWord(wd);
+            cout << "target: " << target << "\n";
             counter = 0;
             score = 0;
             exitFlag = 0;
@@ -38,6 +86,8 @@ class word{
         }
         
         void compareWord(string guess){
+
+            cout << clearLine;
 
             for(int i = 0; i < 5; i++){
                 guess[i] = (char) ::tolower(guess[i]);
@@ -67,14 +117,14 @@ class word{
             counter += 1;
 
             if(score == 5){
-                cout << "\n\nYou Won!\n\n" << clearLine;
+                cout << "\n      You Won!\n\n" << clearLine;
                 exitFlag = 1;
             }
 
             score = 0;
 
             if(counter == 6){
-                cout << "\n\nThe word was \"" << target << "\"\n\n" << clearLine;
+                cout << " The word was \"" << target << "\"\n\n" << clearLine;
                 exitFlag = 1;
             }
 
@@ -90,7 +140,10 @@ class word{
         string horiz = "---------------------";
 
         void setWord(string wd){
+
             target = wd;
+
+            // return t;
         }
 
 
@@ -99,7 +152,7 @@ class word{
 
 int main(){
 
-    cout << "\tWORD-INAL\n\n";
+    cout << "\n      WORD-INAL\n";
 
     string wd = "ghost";
     string guess;
@@ -109,9 +162,7 @@ int main(){
     // system("stty raw");
 
     while(tWord.getExitFlag() == 0){
-        // cin >> guess;
-        guess[0] = fgetc(stdin)
-        // cout << "|>>" << guess << "<<|";
+        guess = userInput();
         tWord.compareWord(guess);
     }
 
