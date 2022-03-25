@@ -78,7 +78,7 @@ class word{
 
         word(string wd){
             setWord(wd);
-            cout << "target: " << target << "\n";
+            cout << "target: " << "*****" << "\n";
             counter = 0;
             score = 0;
             exitFlag = 0;
