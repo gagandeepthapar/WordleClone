@@ -16,7 +16,7 @@ I chose this specific program because I thought it would be fun to create a clon
 ## **How to Play**
 
 ## **Gameplay**
-The rules are identical to the official Wordle rules. Players have 6 tries to guess a 5 letter word. A grey backround indicates that the specified letter does not appear in the word. A yellow backround indicates that the specified letter *does* appear in the word, however, in a different position. A green background indicates that the specified letter appears in the word *and* is in the correct spot.<br><br>
+The rules are identical to the official Wordle rules. Players have 6 tries to guess a 5 letter word. A grey backround indicates that the specified letter does not appear in the word. A yellow backround indicates that the specified letter *does* appear in the word, however, in a different position. A green background indicates that the specified letter appears in the word *and* is in the correct spot. Use your previous guesses to help you get the word within 6 tries!<br><br>
 
 A sample gameplay of WORD-INAL can be seen in the GIF below. The target word is GHOST for each play. In the final version, the target word is randomly selected from a list of 12,000+ words. Any 5 letter combination is valid when playing WORD-INAL.<br><br>
 
