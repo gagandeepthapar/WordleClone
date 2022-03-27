@@ -15,11 +15,11 @@ I chose this specific program because I thought it would be fun to create a clon
 
 ## **How to Play**
 The rules are identical to the official Wordle rules. Players have 6 tries to guess a 5 letter word. A 
- <p style="color:white;background-color:grey">grey background</p>
+ <span style="color:white;background-color:grey">grey background</span>
  indicates that the specified letter does not appear in the word. A
- <p style="color:black;background-color:yellow">yellow background</p>
+ <span style="color:black;background-color:yellow">yellow background</span>
  indicates that the specified letter *does* appear in the word, however, in a different position. A
- <p style="color:black;background-color:green">green background</p>
+ <span style="color:black;background-color:green">green background</span>
  indicates that the specified letter appears in the word *and* is in the correct spot. Use your previous guesses to help you get the word within 6 tries!
 
 ## **Gameplay**
