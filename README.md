@@ -5,7 +5,7 @@ Based on the super-popular game [Wordle](https://www.nytimes.com/games/wordle/in
   <img src="./rev2_UI.png">
 </p>
 
-<div align="center"> <strong> Figure 1. </strong> First revision of the WORD-INAL UI</div>
+<div align="center"> <strong> Figure 1. </strong> Second revision of the WORD-INAL UI</div>
 
 
 ## **Motivation**
