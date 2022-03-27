@@ -89,8 +89,6 @@ class word{
         void setWord(string wd){
 
             target = wd;
-
-            // return t;
         }
 
         string userInput(){
