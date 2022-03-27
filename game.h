@@ -6,19 +6,56 @@
 #include <string>
 #include <stdlib.h>
 #include "word.h"
+using namespace std;
 
 #define WORDLEN 5
 #define LISTLEN 12947
 
-using namespace std;
+string header (31, ' ');
+string title = "WORD-INAL";
 
 class game{
     public:
+        game(){
+            
+            formatHeader();
+            setTarget();
 
+        }
+
+        void playGame(){
+
+            while(target.getExitFlag() == 0){
+                guess = target.userInput();
+                target.compareWord(guess);
+            }
+
+            system("stty cooked");
+
+            return;
+            
+        }
+
+    private:
+
+        string guess;
         word target;
 
-        game(){
+        void formatHeader(){
 
+            header[0] = '|';
+            header[30] = '|';
+
+            for(int i = 0; i < title.length(); i++){
+                header[i + header.length()/2 - title.length()/2] = title[i];
+            }
+
+            cout << horiz << header << "\n" << horiz;
+
+        }
+
+        void setTarget(){
+            
             srand(time(NULL));
             int r = rand() % LISTLEN;
 
@@ -33,21 +70,8 @@ class game{
 
             target.setWord(wd);
 
+            fclose(fp);
+
         }
-
-        void playGame(){
-            while(target.getExitFlag() == 0){
-                guess = target.userInput();
-                target.compareWord(guess);
-            }
-
-            system("stty cooked");
-
-            return;
-            
-        }
-
-    private:
-        string guess;
 
 };
