@@ -27,8 +27,6 @@ class word{
         
         void compareWord(string guess){
 
-            target = "ghost";
-
             transform(guess.begin(), guess.end(), guess.begin(), ::tolower);
 
             for(int i = 0; i < WORDLEN; i++){
