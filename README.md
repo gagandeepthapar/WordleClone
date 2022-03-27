@@ -2,7 +2,7 @@
 Based on the super-popular game [Wordle](https://www.nytimes.com/games/wordle/index.html), **WORD-INAL** is a terminal-based clone written entirely in C++.
 
 <p align="center">
-  <img width="292" height="402" src="./rev1_UI.png">
+  <img src="./rev2_UI.png">
 </p>
 
 <div align="center"> <strong> Figure 1. </strong> First revision of the WORD-INAL UI</div>
@@ -26,7 +26,7 @@ The rules are identical to the official Wordle rules. Players have 6 tries to gu
 A sample gameplay of WORD-INAL can be seen in the GIF below. The target word is GHOST for each play. In the final version, the target word is randomly selected from a list of 12,000+ words. Any 5 letter combination is valid when playing WORD-INAL.<br><br>
 
 <p align="center">
-  <img src="./rev1gif.gif">
+  <img src="rev2gif.gif">
 </p>
 
 <div align="center"> <strong> Figure 2. </strong> Gameplay of the first version of WORD-INAL</div>
