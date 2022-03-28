@@ -33,3 +33,9 @@ A sample gameplay of WORD-INAL can be seen in the GIF below. The target word is 
 
 
 <br>Type in your guesses and see how well you do!<br><br>
+
+## **Future Work**
+- ~~Clean up UI (i.e., 3x3 squares)~~
+- Add feature to see "used up keys"
+- Replace wordlist with official Wordle List
+- Add mechanic to fix double/single letter coloring
